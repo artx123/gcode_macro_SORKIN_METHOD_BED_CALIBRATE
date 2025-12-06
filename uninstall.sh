@@ -8,10 +8,10 @@ INC="[include plugins/gcode_macro-SORKIN_METHOD_BED_CALIBRATE/new_macro_bed_call
 FILE="/opt/config/mod_data/plugins.cfg"
 
 if grep -q "${INC}" "${FILE}"; then
-    
     sed -i "/${INC}/d" "${FILE}"
+    echo "Line removed from ${FILE}"
 else
-    echo "not found string ${FILE}"
+    echo "Line not found in ${FILE}"
 fi
 
 echo "plugin uninstalled"
