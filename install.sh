@@ -7,7 +7,6 @@ source /opt/config/mod/.shell/0.sh
 INC="[include plugins/gcode_macro_SORKIN_METHOD_BED_CALIBRATE/new_macro_bed_call.cfg]"
 FILE="/opt/config/mod_data/plugins.cfg"
 
-echo "Проверяю и добавляю строку в ${FILE}..."
 grep -q "${INC}" "${FILE}" || echo "${INC}" >> "${FILE}"
 
 echo "plugin installed"
