@@ -10,9 +10,8 @@ FILE="/opt/config/mod_data/plugins.cfg"
 if grep -q "${INC}" "${FILE}"; then
     
     sed -i "/${INC}/d" "${FILE}"
-    echo "Строка удалена из ${FILE}"
 else
-    echo "Строка не найдена в ${FILE}"
+    echo "not found string ${FILE}"
 fi
 
 echo "plugin uninstalled"
