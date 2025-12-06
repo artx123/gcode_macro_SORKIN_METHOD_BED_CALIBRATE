@@ -28,15 +28,7 @@ fi
 echo "Проверяю и добавляю строку в ${FILE}..."
 grep -q "${INC}" "${FILE}" || echo "${INC}" >> "${FILE}"
 
-# 5. Запускаем install.sh из папки плагина (если он есть)
-if [ -f "${PLUGIN_DIR}/install.sh" ]; then
-    echo "Запускаю install.sh..."
-    sh "${PLUGIN_DIR}/install.sh"
-else
-    echo "Внимание: install.sh не найден в папке плагина. Пропускаю выполнение."
-fi
 
-# 6. Сообщения об успехе
 echo "Плагин установлен: ${PLUGIN_DIR}"
 echo "plugin installed"
 echo "REBOOT" >/tmp/printer
